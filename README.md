@@ -1,4 +1,4 @@
-# Boilerplate
+# JobPrompter
 
 ### Setup
  1. Initialize virtual env: `make venv`
@@ -13,4 +13,4 @@
 - Lint code: `make lint`
 
 ### Postgres setup:
-# job-prompter
+
