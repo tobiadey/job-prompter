@@ -1,0 +1,22 @@
+# Cache files
+/.cache
+__pycache__
+*.pyc
+.#*
+.DS_Store
+.pytest_cache
+.mypy_cache/
+
+# Environments
+/env
+
+# Editors
+.vscode
+
+# local Makefile
+Makefile.local
+.envrc
+
+# IPython
+profile_default/
+ipython_config.py
