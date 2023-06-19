@@ -1,17 +1,21 @@
-# Run unit tests (default rule)
-run-dev:
-	python3 -m wsgi
-
-# Run unit tests (default rule)
-test:
-	python3 -m pytest
-
 # Prepare virtual environment
 venv-create:
 	python3 -m venv env
 
 venv: venv-create
 	@echo "\nUse '. env/bin/activate' to activate and 'make install' to install all dependencies"
+
+# Run frontend server
+run-client:
+	@echo "no client yet"
+
+# Run backend server
+run-server:
+	python3 -m wsgi
+
+# Run unit tests (default rule)
+test:
+	python3 -m pytest
 
 # Install dependencies
 install:

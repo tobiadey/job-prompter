@@ -6,8 +6,8 @@
  3. Install dependencies: `make install`
 
 ### Notes
-- Run backend application: `make run-dev`
-- Run frontend application: `make run-dev`
+- Run backend application: `make run-server`
+- Run frontend application: `make run-client`
 - Run unit tests (whole codebase): `make test`
 - Make code pretty: `make format`
 - Lint code: `make lint`
