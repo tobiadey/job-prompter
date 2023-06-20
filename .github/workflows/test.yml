@@ -19,7 +19,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        make -C api install
+        make -C backend install
 
     - name: Analysing the code with flake8
       run: |
@@ -27,4 +27,4 @@ jobs:
 
     - name: Run Tests
       run: |
-        make -C api test
+        make -C backend test

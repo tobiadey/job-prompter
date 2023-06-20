@@ -1,0 +1,17 @@
+alembic
+black
+flake8
+flake8-black
+flake8-isort
+flake8-tidy-imports
+flask
+flask-cors
+flask-sqlalchemy
+gevent
+gunicorn
+ipython
+isort
+mypy
+pytest
+python-dotenv
+

@@ -13,10 +13,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start-api": "cd ../api && env/bin/flask run --no-debugger",
+    "start-server-dev": "cd ../backend && env/bin/gunicorn -e FLASK_ENV=development -c gunicorn-dev.cfg.py wsgi",
+    "start-server-prod": "cd ../backend && env/bin/gunicorn -e FLASK_ENV=production -c gunicorn.cfg.py wsgi",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test-api": "cd ../api && env/bin/pytest",
+    "test-backend": "cd ../backend && env/bin/pytest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
