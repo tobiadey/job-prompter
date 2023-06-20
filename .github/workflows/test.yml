@@ -23,7 +23,7 @@ jobs:
 
     - name: Analysing the code with flake8
       run: |
-        make lint
+        make -C backend lint
 
     - name: Run Tests
       run: |
