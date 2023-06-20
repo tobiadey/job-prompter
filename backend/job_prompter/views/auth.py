@@ -1,6 +1,6 @@
 from flask import Blueprint
 
-from job_prompter import config
+# from job_prompter import config
 
 auth_bprint = Blueprint("auth", __name__)
 

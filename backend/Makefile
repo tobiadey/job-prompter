@@ -20,8 +20,13 @@ format: format-black format-isort
 #---------------------------
 #Check code style
 #---------------------------
-lint: flake8
+lint-flake8:
+	flake8 job_prompter
 
+lint-types:
+	mypy --package job_prompter
+
+lint: lint-types lint-flake8
 
 #---------------------------
 #Prepare virtual environment

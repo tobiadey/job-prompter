@@ -1,10 +1,9 @@
 import os
 
-from flask import Flask, Request, g, got_request_exception, request
-
+from flask import Flask
 from werkzeug.middleware.proxy_fix import ProxyFix
 
-from job_prompter.extensions import db
+# from job_prompter.extensions import db
 
 
 def register_views(app):
