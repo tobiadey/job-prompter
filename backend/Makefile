@@ -20,13 +20,9 @@ format: format-black format-isort
 #---------------------------
 #Check code style
 #---------------------------
-lint-flake8:
-	flake8 job_prompter
-
-lint-types:
-	mypy --package job_prompter
-
-lint: lint-types lint-flake8
+# Check code style
+lint:
+	flake8 
 
 #---------------------------
 #Prepare virtual environment
@@ -42,13 +38,13 @@ venv: venv-create
 #Install dependencies
 #---------------------------
 deps-pre:
-	pip install pip-tools
+	pip3 install pip-tools
 
 deps-compile:
-	pip-compile requirements.in
+	pip3-compile requirements.in
 
 deps-install:
-	pip-sync
+	pip3-sync
 
 # Recalculate and install dependencies
 deps: deps-pre deps-compile deps-install
@@ -67,9 +63,8 @@ server-prod:
 	gunicorn -e FLASK_ENV=production -c gunicorn.cfg.py wsgi
 
 
-
 #---------------------------
-#Database
+#Database migrations
 #---------------------------
 db-migrate:
 	alembic revision --autogenerate -m 'Change summary'

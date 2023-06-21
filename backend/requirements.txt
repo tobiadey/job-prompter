@@ -80,7 +80,7 @@ matplotlib-inline==0.1.6
     # via ipython
 mccabe==0.7.0
     # via flake8
-mypy==0.991
+mypy==1.4.0
     # via -r requirements.in
 mypy-extensions==1.0.0
     # via
@@ -115,8 +115,6 @@ pyflakes==3.0.1
 pygments==2.15.1
     # via ipython
 pytest==7.2.1
-    # via -r requirements.in
-python-dotenv==1.0.0
     # via -r requirements.in
 six==1.16.0
     # via flask-cors

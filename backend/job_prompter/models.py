@@ -1,11 +1,12 @@
 from datetime import datetime
 
+# from job_prompter.factory import create_app
 from sqlalchemy import Column, DateTime, Integer, String
 
 from job_prompter.extensions import db
 
 
-class User(db.Model):
+class User(db):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True)
