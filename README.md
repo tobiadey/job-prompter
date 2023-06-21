@@ -2,10 +2,10 @@
 
 Explain applications purpose...
 
-- [UML - Application Structure & UserFlow](figma.com)
+- Application Structure & UserFlow - [UML](figma.com)
+- UML Designed by Myself - Tobi
 - [UI Design](figma.com)
-- [UI Designed by Bunmi Adewunmi](bunmiadewunmi.com)
-- [UI](figma.com)
+- UI Designed by [Bunmi Adewunmi](bunmiadewunmi.com)
 
 ### Setup Backend Server
 
