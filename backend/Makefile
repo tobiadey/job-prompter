@@ -71,3 +71,11 @@ server-prod:
 #---------------------------
 #Database
 #---------------------------
+db-migrate:
+	alembic revision --autogenerate -m 'Change summary'
+
+db-upgrade:
+	alembic upgrade 'head'
+
+db-downgrade-1:
+	alembic downgrade -1

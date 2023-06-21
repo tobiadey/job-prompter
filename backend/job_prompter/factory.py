@@ -3,7 +3,7 @@ import os
 from flask import Flask
 from werkzeug.middleware.proxy_fix import ProxyFix
 
-# from job_prompter.extensions import db
+from job_prompter.extensions import db
 
 
 def register_views(app):
@@ -30,6 +30,6 @@ def create_app():
     register_views(app)
 
     # Load SQLAlchemy
-    # db.init_app(app)
+    db.init_app(app)
 
     return app
