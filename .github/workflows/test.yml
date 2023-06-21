@@ -22,9 +22,11 @@ jobs:
           make -C backend install
 
       - name: Set up Database
+      env:
+        DB_PASSWORD: user
         run: |
           createdb -h localhost -p 5432 -U user -W job_prompter_test
-          alembic upgrade 'head'
+          echo "${DB_PASSWORD}" | alembic upgrade 'head'
 
       - name: Analysing the code with flake8
         run: |
