@@ -45,5 +45,3 @@ jobs:
       - name: Run Tests
         run: |
           make -C backend test
-        env:
-          DBURL: "postgres://postgres:postgres@localhost:5432/postgres"
