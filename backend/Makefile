@@ -38,13 +38,13 @@ venv: venv-create
 #Install dependencies
 #---------------------------
 deps-pre:
-	pip3 install pip-tools
+	pip install pip-tools
 
 deps-compile:
-	pip3-compile requirements.in
+	pip-compile requirements.in
 
 deps-install:
-	pip3-sync
+	pip-sync
 
 # Recalculate and install dependencies
 deps: deps-pre deps-compile deps-install
