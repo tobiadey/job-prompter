@@ -22,8 +22,8 @@ jobs:
           make -C backend install
 
       - name: Set up Database
-      env:
-        DB_PASSWORD: user
+        env:
+          DB_PASSWORD: user
         run: |
           createdb -h localhost -p 5432 -U user -W job_prompter_test
           echo "${DB_PASSWORD}" | alembic upgrade 'head'
