@@ -9,22 +9,39 @@ jobs:
       matrix:
         python-version: ["3.8", "3.9", "3.10"]
 
+    services:
+      postgres:
+        image: postgres
+
+        env:
+          POSTGRES_PASSWORD: user
+          POSTGRES_USER: user
+          POSTGRES_DB: job_prompter_test
+
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ matrix.python-version }}
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
 
-    - name: Install Dependencies
-      run: |
-        make -C api install
+      - name: Install Dependencies
+        run: |
+          make -C backend install
 
-    - name: Analysing the code with flake8
-      run: |
-        make lint
+      - name: Analysing the code with flake8
+        run: |
+          make -C backend lint
 
-    - name: Run Tests
-      run: |
-        make -C api test
+      - name: Run Tests
+        run: |
+          make -C backend test
