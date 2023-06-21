@@ -2,10 +2,10 @@
 
 Explain applications purpose...
 
-- Application Structure & UserFlow - [UML](https://www.figma.com/)
+- Application Structure & UserFlow - [UML](https://www.figma.com/){:target="\_blank"}
 - UML Designed by Myself - Tobi
-- [UI Design](https://www.figma.com/)
-- UI Designed by [Bunmi Adewunmi](https://www.bunmiadewunmi.com/)
+- [UI Design](https://www.figma.com/){:target="\_blank"}
+- UI Designed by [Bunmi Adewunmi](https://www.bunmiadewunmi.com/){:target="\_blank"}
 
 ### Setup Backend Server
 
