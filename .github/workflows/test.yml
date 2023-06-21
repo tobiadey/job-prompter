@@ -10,21 +10,27 @@ jobs:
         python-version: ["3.8", "3.9", "3.10"]
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ matrix.python-version }}
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
 
-    - name: Install Dependencies
-      run: |
-        make -C backend install
+      - name: Install Dependencies
+        run: |
+          make -C backend install
 
-    - name: Analysing the code with flake8
-      run: |
-        make -C backend lint
+      - name: Set up Database
+        run: |
+          createuser -sP user
+          createdb -O user job_prompter_test
+          alembic upgrade 'head'
 
-    - name: Run Tests
-      run: |
-        make -C backend test
+      - name: Analysing the code with flake8
+        run: |
+          make -C backend lint
+
+      - name: Run Tests
+        run: |
+          make -C backend test
