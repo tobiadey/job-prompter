@@ -33,7 +33,7 @@ Explain applications purpose...
 Prerequisite: Steps 1-4 of Backend setup has been completed.
 
 - Run unit tests: `cd backend && make test`
-- Run unit tests: `cd client && yarn test-api`
+- Run unit tests: `cd client && yarn test-backend`
 
 ### Client Testing
 

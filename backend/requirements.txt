@@ -80,12 +80,8 @@ matplotlib-inline==0.1.6
     # via ipython
 mccabe==0.7.0
     # via flake8
-mypy==1.4.0
-    # via -r requirements.in
 mypy-extensions==1.0.0
-    # via
-    #   black
-    #   mypy
+    # via black
 packaging==23.1
     # via pytest
 parso==0.8.3
@@ -131,7 +127,6 @@ traitlets==5.9.0
 typing-extensions==4.6.3
     # via
     #   alembic
-    #   mypy
     #   sqlalchemy
 wcwidth==0.2.6
     # via prompt-toolkit

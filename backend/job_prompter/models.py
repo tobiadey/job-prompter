@@ -6,7 +6,7 @@ from sqlalchemy import Column, DateTime, Integer, String
 from job_prompter.extensions import db
 
 
-class User(db):
+class User(db.Model):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True)

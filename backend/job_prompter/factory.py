@@ -26,6 +26,8 @@ def create_app():
     # Load config module
     app.config.from_object("job_prompter.config")
 
+    # Enable CORS ?
+
     # Initialise views
     register_views(app)
 
