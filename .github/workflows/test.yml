@@ -9,6 +9,23 @@ jobs:
       matrix:
         python-version: ["3.8", "3.9", "3.10"]
 
+    services:
+      postgres:
+        image: postgres
+
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
     steps:
       - uses: actions/checkout@v3
 
@@ -21,13 +38,6 @@ jobs:
         run: |
           make -C backend install
 
-      - name: Set up Database
-        env:
-          DB_PASSWORD: user
-        run: |
-          createdb -h localhost -p 5432 -U user -W job_prompter_test
-          echo "${DB_PASSWORD}" | alembic upgrade 'head'
-
       - name: Analysing the code with flake8
         run: |
           make -C backend lint
@@ -35,3 +45,5 @@ jobs:
       - name: Run Tests
         run: |
           make -C backend test
+        env:
+          DBURL: "postgres://postgres:postgres@localhost:5432/postgres"
