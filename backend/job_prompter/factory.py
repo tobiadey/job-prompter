@@ -1,6 +1,8 @@
 import os
 
 from flask import Flask
+from flask_cors import CORS
+from flask_session import Session
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 from job_prompter.extensions import db
@@ -26,7 +28,12 @@ def create_app():
     # Load config module
     app.config.from_object("job_prompter.config")
 
-    # Enable CORS ?
+    # Enable CORS
+    CORS(app)
+    app.url_map.strict_slashes = False
+
+    # Enable Sessions
+    Session(app)
 
     # Initialise views
     register_views(app)

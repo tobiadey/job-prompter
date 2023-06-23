@@ -1,0 +1,117 @@
+@import '../App.css';
+
+html,
+body {
+    background-color: var(--blue-white-color);
+}
+
+.lp-body {
+    display: flex;
+    height: 100vh; 
+    color: #424242;
+} 
+
+.lp .left-half {
+    flex: 1;
+    padding-top: 22.5px; 
+    padding-left: 80px;
+}
+.lp .right-half {
+    flex: 1;
+}
+
+.lp .left-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 658.71875px;
+
+}
+
+.lp .left-container .content{
+    padding-top: 30px;
+}
+
+.vector-line {
+  width: 479px;
+  height: 26px;
+  border-top: 8px solid #3F8AE2;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+
+.lp h1 {
+    font-family: Inter;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 77px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.lp p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+
+
+.lp .cta{
+    display: flex;
+    flex-direction: row;
+}
+
+.lp .content .cta .btn{
+    font-family: 'Inter';
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: var(--blue-deep-color);
+    color: var(--blue-white-color);
+    width: 180px;
+    height: 62px;
+    border: none;
+}
+
+.lp .content .cta p{
+    padding-left: 8.5%;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--blue-deep-color);
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+
+.lp .content .cta .link{
+    text-decoration: none;
+    color: var(--blue-deep-color);
+}
+
+
+/* .right-container {
+    position: absolute;
+    width: 399.36px;
+    height: 440.22px;
+    right: -215.43px;
+    bottom: -320.76px;
+    background-image: radial-gradient(var(--blue-light-color) 25%, transparent 16%);
+    background-size: 20px 20px;
+} */
+
+.lp .right-container {
+    position: absolute;
+    width: 399.36px;
+    height: 440.22px;
+    right: -200.43px;
+    bottom: -300.76px;
+    background-image: radial-gradient(var(--blue-light-color) 25%, transparent 16%);
+    background-size: 30px 30px; /* Increase the size for larger circles */
+
+  }
+  
