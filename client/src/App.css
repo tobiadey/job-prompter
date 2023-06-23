@@ -1,3 +1,31 @@
-.App {
-  text-align: center;
+:root {
+  --background-color: #EFF5FC;
+  --text-color: #424242;;
+  --blue-deep-color: #3F8AE2;
+  --blue-white-color: #EFF5FC;
+  --blue-light-color: #97BFEF;
+  --blue-navy-color: #262E5D;
+  
+}
+
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.logo-lar {
+  height: 113px;
+  width: 307px;
+}
+
+.logo-small {
+  height: 60px;
+  width: 163px;
+}
+
+.blue-text{
+  color: var(--blue-deep-color);
 }
